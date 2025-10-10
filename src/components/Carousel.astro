@@ -1,0 +1,15 @@
+<div data-carousel class="relative w-full">
+    <button
+        data-carousel-prev
+        class="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 font-bold text-4xl overflow-hidden"
+        >‹</button
+    >
+    <button
+        data-carousel-next
+        class="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 font-bold text-4xl overflow-hidden"
+        >›</button
+    >
+    <div data-carousel-list class="flex w-screen overflow-x-auto items-center">
+        <slot />
+    </div>
+</div>

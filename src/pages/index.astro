@@ -1,0 +1,362 @@
+---
+import "../styles/global.css";
+import Carousel from "../components/Carousel.astro";
+import SimpleSlider from "../components/SimpleSlider.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Jesus's Portfolio</title>
+	</head>
+	<body>
+		<section class="w-[80vw] flex flex-col gap-[2vh] items-center">
+			<h1 class="flex flex-col items-start w-[60vw]">
+				<strong class="text-2xl">Hello! I'm Jesus</strong><br /><span
+					class="rainbow-text">Fullstack Developer</span
+				>
+			</h1>
+			<p class="text-start w-[80vw]">
+				<strong>+1 year experience.</strong> Web and Desktop App Developer.
+				Specialized in building end-to-end Applications.
+			</p>
+			<nav
+				class="text-start w-[80vw] text-nowrap overflow-hidden rounded-md font-bold"
+			>
+				<a href="https://github.com/JesusMG24" target="_blank"
+					><button class="w-1/3 bg-sky-600 h-[3vh]">GitHub</button></a
+				>
+				<a
+					href="https://www.linkedin.com/in/jesus-mendoza-736a74282/"
+					target="_blank"
+					><button class="w-1/3 bg-blue-600 h-[3vh]">Linkedin</button
+					></a
+				>
+				<a href="mailto:albertomendozax9800@gmail.com"
+					><button class="w-1/3 bg-gray-600 h-[3vh]"
+						>albertomendozax9800@gmail.com</button
+					></a
+				>
+			</nav>
+		</section>
+		<section class="section-element-first">
+			<h2 class="h2-element-first">
+				<strong>Experience & Knowledge</strong>
+			</h2>
+			<Carousel>
+				<li class="li-element-first">
+					<h3 class="h3-element-first">Independent Developer</h3>
+					<p class="p-element-second">Aug 2024 - Present</p>
+					<p class="p-element-first">
+						Built multiple Fullstack Apps, always focusing in
+						Responsive Mobile First Designs, API Efficiency and
+						Database Query Optimization.
+					</p>
+				</li>
+				<li class="li-element-first">
+					<h3 class="h3-element-first">
+						Self-taught Frontend Journey
+					</h3>
+					<p class="p-element-second">Jan 2024 - July 2024</p>
+					<p class="p-element-first">
+						Deep Dived into Frontend Development from CSS libraries
+						like Bootstrap or Tailwind to the complex corners of
+						React and its frameworks such as Next.js or Redux.
+					</p>
+				</li>
+				<li class="li-element-first">
+					<h3 class="h3-element-first">College Taught Knowledge</h3>
+					<p class="p-element-second">Aug 2020 - Dec 2022</p>
+					<p class="p-element-first">
+						During my classes in Software Engineering I concealed my
+						first introduction to programming languages like Python,
+						PHP and C#, learning through the development of
+						Fullstack CRUD Apps, Data Structure Implementations,
+						Simple Automation Scripts, etc.
+					</p>
+				</li>
+				<li class="li-element-first">
+					<h3 class="h3-element-first">Game Developer Enthusiast</h3>
+					<p class="p-element-second">2018 - 2020</p>
+					<p class="p-element-first">
+						Next to a friend we started a journey in which we
+						dreamed of developing a videogame, although those tries
+						were unsuccessful, I was able to drive myself through
+						Unreal Engine learning and developing in the beautiful
+						C++ language.
+					</p>
+				</li>
+				<li class="li-element-first">
+					<h3 class="h3-element-first">JavaScript Obsession</h3>
+					<p class="p-element-second">Aug 2014 - 2018</p>
+					<p class="p-element-first">
+						The years to come are bloated with JavaScript
+						experimenting, being the videogame Minecraft the epitome
+						of such efforts, while the game itself is written in
+						Java, most of its mod's config files were in JavaScript.
+					</p>
+				</li>
+				<li class="li-element-first">
+					<h3 class="h3-element-first">
+						Web Development Summer Course
+					</h3>
+					<p class="p-element-second">May 2014 - Aug 2014</p>
+					<p class="p-element-first">
+						My first approach to the principles of Web Development
+						and Programming Languages, building dozens of landing
+						pages with the recently acquired skills in HTML, CSS and
+						JavaScript.
+					</p>
+				</li>
+			</Carousel>
+		</section>
+		<section class="section-element-first">
+			<h2 class="h2-element-first"><strong>Projects</strong></h2>
+			<Carousel>
+				<article class="article-element-first">
+					<h3 class="h3-element-second">PC Components e-shop</h3>
+					<SimpleSlider data-autoplay="3000">
+						<img
+							src="/images/Screenshot_20250922_150121.jpg"
+							alt="e-shop 1"
+							class="object-cover px-[10vw]"
+						/>
+						<img
+							src="/images/Screenshot_20250922_150344.jpg"
+							alt="e-shop 2"
+							class="object-cover px-[10vw]"
+						/>
+						<img
+							src="/images/Screenshot_20250922_150216.jpg"
+							alt="e-shop 3"
+							class="object-cover px-[10vw]"
+						/>
+					</SimpleSlider>
+					<p class="p-element-third">
+						<button
+							class="bg-sky-600 w-[40vw] hover:bg-pink-700 rounded-l-sm"
+						>
+							<a
+								class="w-full flex justify-center"
+								href="https://effervescent-centaur-74136d.netlify.app/"
+								target="_blank">Demo</a
+							>
+						</button>
+						<button
+							class="bg-blue-600 w-[40vw] hover:bg-pink-700 rounded-r-sm"
+						>
+							<a
+								class="w-full flex justify-center"
+								href="https://github.com/JesusMG24/e-shop-exp"
+								target="_blank">Source</a
+							>
+						</button>
+					</p>
+				</article>
+				<article class="article-element-first">
+					<h3 class="h3-element-second">Game Achievement Tracker</h3>
+					<SimpleSlider data-autoplay="3000">
+						<img
+							src="/images/Screenshot_20251010_014046.png"
+							alt="ach-tracker 1"
+							class="object-cover px-[10vw] h-[18vh]"
+						/>
+						<img
+							src="/images/Screenshot_20251010_014130.png"
+							alt="ach-tracker 2"
+							class="object-cover px-[10vw] h-[18vh]"
+						/>
+						<img
+							src="/images/Screenshot_20251010_014235.png"
+							alt="ach-tracker 3"
+							class="object-cover px-[10vw] h-[18vh]"
+						/>
+					</SimpleSlider>
+					<p class="p-element-third">
+						<button
+							class="bg-sky-600 w-[40vw] hover:bg-pink-700 rounded-l-sm"
+						>
+							<a
+								class="w-full flex justify-center"
+								href="https://famous-croquembouche-3d209d.netlify.app/"
+								target="_blank">Demo</a
+							>
+						</button>
+						<button
+							class="bg-blue-600 w-[40vw] hover:bg-pink-700 rounded-r-sm"
+						>
+							<a
+								class="w-full flex justify-center"
+								href="https://github.com/JesusMG24/achievement-tracker-exp"
+								target="_blank">Source</a
+							>
+						</button>
+					</p>
+				</article>
+				<article class="article-element-first">
+					<h3 class="h3-element-second">Social Media Prototype</h3>
+					<p class="p-element-third">
+						<button
+							class="bg-sky-600 w-[40vw] hover:bg-pink-700 rounded-l-sm"
+						>
+							<a
+								class="w-full flex justify-center"
+								href=""
+								target="_blank">Demo</a
+							>
+						</button>
+						<button
+							class="bg-blue-600 w-[40vw] hover:bg-pink-700 rounded-r-sm"
+						>
+							<a
+								class="w-full flex justify-center"
+								href="https://github.com/JesusMG24/social-media-exp"
+								target="_blank">Source</a
+							>
+						</button>
+					</p>
+				</article>
+			</Carousel>
+		</section>
+		<section class="section-element-first">
+			<h2 class="h2-element-first"><strong>Techs & Skills</strong></h2>
+			<Carousel>
+				<ul class="ul-element-first">
+					<h4 class="h4-element-first">Frontend</h4>
+					<div class="flex flex-wrap">
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2107/PNG/512/file_type_html_icon_130541.png"
+							/>
+							<h5 class="h5-element-first">HTML</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2107/PNG/512/file_type_css_icon_130661.png"
+							/>
+							<h5 class="h5-element-first">CSS</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2108/PNG/512/javascript_icon_130900.png"
+							/>
+							<h5 class="h5-element-first">JavaScript</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2415/PNG/512/react_original_logo_icon_146374.png"
+							/>
+							<h5 class="h5-element-first">ReactJS</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2107/PNG/512/file_type_tailwind_icon_130128.png"
+							/>
+							<h5 class="h5-element-first">Tailwind CSS</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								class="invert"
+								src="https://images.icon-icons.com/3911/PNG/512/astro_logo_icon_247543.png"
+							/>
+							<h5 class="h5-element-first">Astro</h5>
+						</li>
+					</div>
+				</ul>
+				<ul class="ul-element-first">
+					<h4 class="h4-element-first">Backend</h4>
+					<div class="flex flex-wrap">
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2107/PNG/512/file_type_python_icon_130221.png"
+							/>
+							<h5 class="h5-element-first">Python</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2415/PNG/512/nodejs_plain_logo_icon_146409.png"
+							/>
+							<h5 class="h5-element-first">NodeJS</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2107/PNG/512/file_type_django_icon_130645.png"
+							/>
+							<h5 class="h5-element-first">Django</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								class="invert"
+								src="https://images.icon-icons.com/2699/PNG/512/expressjs_logo_icon_169185.png"
+							/>
+							<h5 class="h5-element-first">ExpressJS</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2415/PNG/512/postgresql_plain_logo_icon_146389.png"
+							/>
+							<h5 class="h5-element-first">PostgreSQL</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2699/PNG/512/mariadb_logo_icon_170968.png"
+							/>
+							<h5 class="h5-element-first">MariaDB</h5>
+						</li>
+					</div>
+				</ul>
+				<ul class="ul-element-first">
+					<h4 class="h4-element-first">DevOps & Tooling</h4>
+					<div class="flex flex-wrap">
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2107/PNG/512/file_type_docker_icon_130643.png"
+							/>
+							<h5 class="h5-element-first">Docker</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2107/PNG/512/file_type_nginx_icon_130305.png"
+							/>
+							<h5 class="h5-element-first">Nginx</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								class="invert"
+								src="https://images.icon-icons.com/2389/PNG/512/amazon_aws_logo_icon_145507.png"
+							/><h5 class="h5-element-first">AWS (EC2)</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								src="https://images.icon-icons.com/2107/PNG/512/file_type_git_icon_130581.png"
+							/>
+							<h5 class="h5-element-first">Git</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								class="invert"
+								src="https://images.icon-icons.com/936/PNG/512/github-logo_icon-icons.com_73546.png"
+							/>
+							<h5 class="h5-element-first">GitHub</h5>
+						</li>
+						<li class="li-element-second">
+							<img
+								class="invert"
+								src="https://images.icon-icons.com/2699/PNG/512/gnu_bash_logo_icon_170079.png"
+							/>
+							<h5 class="h5-element-first">Bash</h5>
+						</li>
+					</div>
+				</ul>
+			</Carousel>
+		</section>
+		<section>
+			<h2 class="h2-element-first"><strong>About me</strong></h2>
+		</section>
+		<script type="module" src="/scripts/carousel.js"></script>
+		<script type="module" src="/scripts/simple-slider.js"></script>
+	</body>
+</html>
