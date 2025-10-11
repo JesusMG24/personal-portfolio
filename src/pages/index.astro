@@ -13,7 +13,7 @@ import SimpleSlider from "../components/SimpleSlider.astro";
 		<title>Jesus's Portfolio</title>
 	</head>
 	<body>
-		<section class="w-[80vw] flex flex-col gap-[2vh] items-center">
+		<header class="header-element-first">
 			<h1 class="flex flex-col items-start w-[60vw]">
 				<strong class="text-2xl">Hello! I'm Jesus</strong><br /><span
 					class="rainbow-text">Fullstack Developer</span
@@ -23,25 +23,12 @@ import SimpleSlider from "../components/SimpleSlider.astro";
 				<strong>+1 year experience.</strong> Web and Desktop App Developer.
 				Specialized in building end-to-end Applications.
 			</p>
-			<nav
-				class="text-start w-[80vw] text-nowrap overflow-hidden rounded-md font-bold"
-			>
-				<a href="https://github.com/JesusMG24" target="_blank"
-					><button class="w-1/3 bg-sky-600 h-[3vh]">GitHub</button></a
-				>
-				<a
-					href="https://www.linkedin.com/in/jesus-mendoza-736a74282/"
-					target="_blank"
-					><button class="w-1/3 bg-blue-600 h-[3vh]">Linkedin</button
-					></a
-				>
-				<a href="mailto:albertomendozax9800@gmail.com"
-					><button class="w-1/3 bg-gray-600 h-[3vh]"
-						>albertomendozax9800@gmail.com</button
-					></a
-				>
+			<nav class="flex w-full px-[10vw] font-bold text-shadow-xs text-shadow-black">
+				<a class="flex justify-center w-1/3 bg-blue-500 rounded-l-md hover:bg-pink-500" href="https://www.linkedin.com/in/jesus-mendoza-736a74282/">Linkedin</a>
+				<a class="flex justify-center w-1/3 bg-sky-500 hover:bg-pink-500" href="https://github.com/JesusMG24">GitHub</a>
+				<a class="flex justify-center w-1/3 bg-zinc-500 rounded-r-md hover:bg-pink-500" href="mailto:albertomendozax9800@gmail.com">e-mail</a>
 			</nav>
-		</section>
+		</header>
 		<section class="section-element-first">
 			<h2 class="h2-element-first">
 				<strong>Experience & Knowledge</strong>
@@ -136,24 +123,8 @@ import SimpleSlider from "../components/SimpleSlider.astro";
 						/>
 					</SimpleSlider>
 					<p class="p-element-third">
-						<button
-							class="bg-sky-600 w-[40vw] hover:bg-pink-700 rounded-l-sm"
-						>
-							<a
-								class="w-full flex justify-center"
-								href="https://effervescent-centaur-74136d.netlify.app/"
-								target="_blank">Demo</a
-							>
-						</button>
-						<button
-							class="bg-blue-600 w-[40vw] hover:bg-pink-700 rounded-r-sm"
-						>
-							<a
-								class="w-full flex justify-center"
-								href="https://github.com/JesusMG24/e-shop-exp"
-								target="_blank">Source</a
-							>
-						</button>
+						<a class="w-1/2 bg-sky-500 hover:bg-pink-500 rounded-bl-md" href="https://effervescent-centaur-74136d.netlify.app/" target="_blank">Demo</a>
+						<a class="w-1/2 bg-blue-500 hover:bg-pink-500 rounded-br-md" href="https://github.com/JesusMG24/e-shop-exp" target="_blank">Source</a>
 					</p>
 				</article>
 				<article class="article-element-first">
@@ -176,47 +147,20 @@ import SimpleSlider from "../components/SimpleSlider.astro";
 						/>
 					</SimpleSlider>
 					<p class="p-element-third">
-						<button
-							class="bg-sky-600 w-[40vw] hover:bg-pink-700 rounded-l-sm"
-						>
-							<a
-								class="w-full flex justify-center"
-								href="https://famous-croquembouche-3d209d.netlify.app/"
-								target="_blank">Demo</a
-							>
-						</button>
-						<button
-							class="bg-blue-600 w-[40vw] hover:bg-pink-700 rounded-r-sm"
-						>
-							<a
-								class="w-full flex justify-center"
-								href="https://github.com/JesusMG24/achievement-tracker-exp"
-								target="_blank">Source</a
-							>
-						</button>
+						<a class="w-1/2 bg-sky-500 hover:bg-pink-500 rounded-bl-md" href="https://famous-croquembouche-3d209d.netlify.app/" target="_blank">Demo</a>
+						<a class="w-1/2 bg-blue-500 hover:bg-pink-500 rounded-br-md" href="https://github.com/JesusMG24/achievement-tracker-exp" target="_blank">Source</a>
 					</p>
 				</article>
 				<article class="article-element-first">
 					<h3 class="h3-element-second">Social Media Prototype</h3>
+					<SimpleSlider>
+						<img src="/images/Screenshot_20251010_194642.webp" class="object-cover px-[10vw] h-[18vh]">
+						<img src="/images/Screenshot_20251010_194731.webp" class="object-cover px-[10vw] h-[18vh]">
+						<img src="/images/Screenshot_20251010_194819.webp" class="object-cover px-[10vw] h-[18vh]">
+					</SimpleSlider>
 					<p class="p-element-third">
-						<button
-							class="bg-sky-600 w-[40vw] hover:bg-pink-700 rounded-l-sm"
-						>
-							<a
-								class="w-full flex justify-center"
-								href=""
-								target="_blank">Demo</a
-							>
-						</button>
-						<button
-							class="bg-blue-600 w-[40vw] hover:bg-pink-700 rounded-r-sm"
-						>
-							<a
-								class="w-full flex justify-center"
-								href="https://github.com/JesusMG24/social-media-exp"
-								target="_blank">Source</a
-							>
-						</button>
+						<a class="w-1/2 bg-sky-500 hover:bg-pink-500 rounded-bl-md" href="https://chipper-haupia-b9fc77.netlify.app/" target="_blank">Demo</a>
+						<a class="w-1/2 bg-blue-500 hover:bg-pink-500 rounded-br-md" href="https://github.com/JesusMG24/social-media-exp" target="_blank">Source</a>
 					</p>
 				</article>
 			</Carousel>
