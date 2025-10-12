@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Carousel from "../components/Carousel.astro";
+import CarouselTwo from "../components/Carousel-2.astro";
 import SimpleSlider from "../components/SimpleSlider.astro";
 ---
 
@@ -12,21 +13,53 @@ import SimpleSlider from "../components/SimpleSlider.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Jesus's Portfolio</title>
 	</head>
-	<body>
+	<body class="2xl:text-lg">
 		<header class="header-element-first">
-			<h1 class="flex flex-col items-start w-[60vw]">
+			<h1 class="flex flex-col items-start w-[60vw] 2xl:w-[20vw]">
 				<strong class="text-2xl">Hello! I'm Jesus</strong><br /><span
 					class="rainbow-text">Fullstack Developer</span
 				>
 			</h1>
-			<p class="text-start w-[80vw]">
+			<p class="text-start w-[80vw] 2xl:w-full 2xl:px-[40vw]">
 				<strong>+1 year experience.</strong> Web and Desktop App Developer.
 				Specialized in building end-to-end Applications.
 			</p>
-			<nav class="flex w-full px-[10vw] font-bold text-shadow-xs text-shadow-black">
-				<a class="flex justify-center w-1/3 bg-blue-500 rounded-l-md hover:bg-pink-500" href="https://www.linkedin.com/in/jesus-mendoza-736a74282/">Linkedin</a>
-				<a class="flex justify-center w-1/3 bg-sky-500 hover:bg-pink-500" href="https://github.com/JesusMG24">GitHub</a>
-				<a class="flex justify-center w-1/3 bg-zinc-500 rounded-r-md hover:bg-pink-500" href="mailto:albertomendozax9800@gmail.com">e-mail</a>
+			<nav
+				class="flex w-full px-[10vw] font-bold text-shadow-xs text-shadow-black 2xl:w-full 2xl:px-[34vw]"
+			>
+				<a
+					class="flex justify-center items-center w-1/3 bg-blue-500 rounded-l-md hover:bg-pink-500 h-[4vh] 2xl:w-1/4 2xl:h-[3vh]"
+					href="https://www.linkedin.com/in/jesus-mendoza-736a74282/"
+					target="_blank"
+					rel="noopener noreferrer">Linkedin</a
+				>
+				<a
+					class="flex justify-center items-center w-1/3 bg-sky-500 hover:bg-pink-500 h-[4vh] 2xl:w-1/4 2xl:h-[3vh]"
+					href="https://github.com/JesusMG24"
+					target="_blank"
+					rel="noopener noreferrer">GitHub</a
+				>
+				<a
+					class="flex justify-center items-center w-1/3 bg-zinc-500 rounded-r-md hover:bg-pink-500 h-[4vh] 2xl:hidden"
+					href="mailto:albertomendozax9800@gmail.com"
+					rel="noopener noreferrer"
+					title="albertomendozax9800@gmail.com">e-mail</a
+				>
+				<a
+					class="text-sm w-2/3 bg-zinc-500 rounded-r-md hover:bg-pink-500 h-[4vh] hidden 2xl:block 2xl:h-[3vh]"
+					href="mailto:albertomendozax9800@gmail.com"
+					rel="noopener noreferrer"
+					><p class="h-full flex items-center justify-center">
+						albertomendozax9800@gmail.com
+					</p></a
+				>
+				<a
+					class="ml-4 px-3 py-1 bg-zinc-700 text-white rounded-md hover:bg-pink-700 flex items-center h-[4vh] w-[20vw] text-xs justify-center 2xl:w-[10vw] 2xl:h-[3vh]"
+					href="/files/resume.pdf"
+					download="Jesus_Mendoza_Resume.pdf"
+					rel="noopener noreferrer"
+					aria-label="Download resume">Download resume</a
+				>
 			</nav>
 		</header>
 		<section class="section-element-first">
@@ -36,95 +69,112 @@ import SimpleSlider from "../components/SimpleSlider.astro";
 			<Carousel>
 				<li class="li-element-first">
 					<h3 class="h3-element-first">Independent Developer</h3>
-					<p class="p-element-second">Aug 2024 - Present</p>
+					<p class="p-element-second">
+						<time datetime="2024-08">Aug 2024</time> — <time
+							datetime="2025-10">Present</time
+						>
+					</p>
 					<p class="p-element-first">
-						Built multiple Fullstack Apps, always focusing in
-						Responsive Mobile First Designs, API Efficiency and
-						Database Query Optimization.
+						I've built and maintained multiple web apps, always
+						focusing on mobile‑first responsive UIs, API efficiency,
+						and database query optimization.
+					</p>
+					<p class="p-element-first">
+						<strong>Stack</strong>: React · Python · Node ·
+						PostgreSQL · Tailwind
 					</p>
 				</li>
 				<li class="li-element-first">
 					<h3 class="h3-element-first">
-						Self-taught Frontend Journey
+						Frontend Specialist (Self‑Study)
 					</h3>
-					<p class="p-element-second">Jan 2024 - July 2024</p>
-					<p class="p-element-first">
-						Deep Dived into Frontend Development from CSS libraries
-						like Bootstrap or Tailwind to the complex corners of
-						React and its frameworks such as Next.js or Redux.
+					<p class="p-element-second">
+						<time datetime="2023-10">Oct 2023</time> — <time
+							datetime="2024-07">Jul 2024</time
+						>
 					</p>
-				</li>
-				<li class="li-element-first">
-					<h3 class="h3-element-first">College Taught Knowledge</h3>
-					<p class="p-element-second">Aug 2020 - Dec 2022</p>
 					<p class="p-element-first">
-						During my classes in Software Engineering I concealed my
-						first introduction to programming languages like Python,
-						PHP and C#, learning through the development of
-						Fullstack CRUD Apps, Data Structure Implementations,
-						Simple Automation Scripts, etc.
+						Deep‑dived into modern frontend patterns:
+						component‑driven design, Tailwind utility styles, and
+						React frameworks like Next.js and Vite. Built polished
+						prototypes and refined UI workflows.
 					</p>
-				</li>
-				<li class="li-element-first">
-					<h3 class="h3-element-first">Game Developer Enthusiast</h3>
-					<p class="p-element-second">2018 - 2020</p>
 					<p class="p-element-first">
-						Next to a friend we started a journey in which we
-						dreamed of developing a videogame, although those tries
-						were unsuccessful, I was able to drive myself through
-						Unreal Engine learning and developing in the beautiful
-						C++ language.
-					</p>
-				</li>
-				<li class="li-element-first">
-					<h3 class="h3-element-first">JavaScript Obsession</h3>
-					<p class="p-element-second">Aug 2014 - 2018</p>
-					<p class="p-element-first">
-						The years to come are bloated with JavaScript
-						experimenting, being the videogame Minecraft the epitome
-						of such efforts, while the game itself is written in
-						Java, most of its mod's config files were in JavaScript.
+						<strong>Stack</strong>: React · Tailwind · Next.js ·
+						Vite
 					</p>
 				</li>
 				<li class="li-element-first">
 					<h3 class="h3-element-first">
-						Web Development Summer Course
+						Software Engineering — College
 					</h3>
-					<p class="p-element-second">May 2014 - Aug 2014</p>
+					<p class="p-element-second">
+						<time datetime="2020-08">Aug 2020</time> — <time
+							datetime="2022-12">Dec 2022</time
+						>
+					</p>
 					<p class="p-element-first">
-						My first approach to the principles of Web Development
-						and Programming Languages, building dozens of landing
-						pages with the recently acquired skills in HTML, CSS and
-						JavaScript.
+						College was my first structured introduction to
+						programming (Python, PHP, C#). I built full‑stack CRUD
+						apps, implemented core data structures, and wrote
+						automation scripts for class projects.
+					</p>
+					<p class="p-element-first">
+						<strong>Stack</strong>: Python · C++ · C# · PHP · SQL
 					</p>
 				</li>
 			</Carousel>
 		</section>
 		<section class="section-element-first">
 			<h2 class="h2-element-first"><strong>Projects</strong></h2>
-			<Carousel>
+			<CarouselTwo>
 				<article class="article-element-first">
-					<h3 class="h3-element-second">PC Components e-shop</h3>
+					<h3 class="h3-element-second">e-shop</h3>
 					<SimpleSlider data-autoplay="3000">
 						<img
 							src="/images/Screenshot_20250922_150121.jpg"
-							alt="e-shop 1"
-							class="object-cover px-[10vw]"
+							alt="e-shop — product listing view"
+							class="object-cover px-[10vw] 2xl:p-0 2xl:h-[15vh]"
+							loading="lazy"
 						/>
 						<img
 							src="/images/Screenshot_20250922_150344.jpg"
-							alt="e-shop 2"
-							class="object-cover px-[10vw]"
+							alt="e-shop — product detail view"
+							class="object-cover px-[10vw] 2xl:p-0 2xl:h-[15vh]"
+							loading="lazy"
 						/>
 						<img
 							src="/images/Screenshot_20250922_150216.jpg"
-							alt="e-shop 3"
-							class="object-cover px-[10vw]"
+							alt="e-shop — cart and checkout"
+							class="object-cover px-[10vw] 2xl:p-0 2xl:h-[15vh]"
+							loading="lazy"
 						/>
 					</SimpleSlider>
 					<p class="p-element-third">
-						<a class="w-1/2 bg-sky-500 hover:bg-pink-500 rounded-bl-md" href="https://effervescent-centaur-74136d.netlify.app/" target="_blank">Demo</a>
-						<a class="w-1/2 bg-blue-500 hover:bg-pink-500 rounded-br-md" href="https://github.com/JesusMG24/e-shop-exp" target="_blank">Source</a>
+						<a
+							class="w-1/2 bg-sky-500 hover:bg-pink-500 rounded-bl-md flex items-center justify-center h-[4vh] 2xl:h-[3vh]"
+							href="https://effervescent-centaur-74136d.netlify.app/"
+							target="_blank"
+							rel="noopener noreferrer">Demo</a
+						>
+						<a
+							class="w-1/2 bg-blue-500 hover:bg-pink-500 rounded-br-md flex items-center justify-center h-[4vh] 2xl:h-[3vh]"
+							href="https://github.com/JesusMG24/e-shop-exp"
+							target="_blank"
+							rel="noopener noreferrer">Source</a
+						>
+					</p>
+					<p
+						class="p-element-first w-screen px-[10vw] mt-[2vh] 2xl:w-full 2xl:px-0 2xl:text-[.8vw]"
+					>
+						A small full‑stack storefront with product listings,
+						cart and checkout flows.
+					</p>
+					<p
+						class="p-element-first w-screen px-[10vw] 2xl:w-full 2xl:px-0 2xl:text-[.8vw]"
+					>
+						<strong>Stack</strong>: React · Python · SQLite ·
+						Tailwind
 					</p>
 				</article>
 				<article class="article-element-first">
@@ -132,42 +182,106 @@ import SimpleSlider from "../components/SimpleSlider.astro";
 					<SimpleSlider data-autoplay="3000">
 						<img
 							src="/images/Screenshot_20251010_014046.png"
-							alt="ach-tracker 1"
-							class="object-cover px-[10vw] h-[18vh]"
+							alt="Achievement Tracker — main dashboard"
+							class="object-cover px-[10vw] h-[18vh] 2xl:p-0 2xl:h-[15vh]"
+							loading="lazy"
 						/>
 						<img
 							src="/images/Screenshot_20251010_014130.png"
-							alt="ach-tracker 2"
-							class="object-cover px-[10vw] h-[18vh]"
+							alt="Achievement Tracker — add/edit achievement modal"
+							class="object-cover px-[10vw] h-[18vh] 2xl:p-0 2xl:h-[15vh]"
+							loading="lazy"
 						/>
 						<img
 							src="/images/Screenshot_20251010_014235.png"
-							alt="ach-tracker 3"
-							class="object-cover px-[10vw] h-[18vh]"
+							alt="Achievement Tracker — statistics and filters"
+							class="object-cover px-[10vw] h-[18vh] 2xl:p-0 2xl:h-[15vh]"
+							loading="lazy"
 						/>
 					</SimpleSlider>
 					<p class="p-element-third">
-						<a class="w-1/2 bg-sky-500 hover:bg-pink-500 rounded-bl-md" href="https://famous-croquembouche-3d209d.netlify.app/" target="_blank">Demo</a>
-						<a class="w-1/2 bg-blue-500 hover:bg-pink-500 rounded-br-md" href="https://github.com/JesusMG24/achievement-tracker-exp" target="_blank">Source</a>
+						<a
+							class="w-1/2 bg-sky-500 hover:bg-pink-500 rounded-bl-md flex items-center justify-center h-[4vh] 2xl:h-[3vh]"
+							href="https://famous-croquembouche-3d209d.netlify.app/"
+							target="_blank"
+							rel="noopener noreferrer">Demo</a
+						>
+						<a
+							class="w-1/2 bg-blue-500 hover:bg-pink-500 rounded-br-md flex items-center justify-center h-[4vh] 2xl:h-[3vh]"
+							href="https://github.com/JesusMG24/achievement-tracker-exp"
+							target="_blank"
+							rel="noopener noreferrer">Source</a
+						>
+					</p>
+					<p
+						class="p-element-first w-screen px-[10vw] mt-[2vh] 2xl:w-full 2xl:px-0 2xl:text-[.8vw]"
+					>
+						A lightweight app to track in‑game achievements with
+						filters and quick stats.
+					</p>
+					<p
+						class="p-element-first w-screen px-[10vw] 2xl:w-full 2xl:px-0 2xl:text-[.8vw]"
+					>
+						<strong>Stack</strong>: React · Node · PostgreSQL ·
+						Tailwind
 					</p>
 				</article>
 				<article class="article-element-first">
 					<h3 class="h3-element-second">Social Media Prototype</h3>
 					<SimpleSlider>
-						<img src="/images/Screenshot_20251010_194642.webp" class="object-cover px-[10vw] h-[18vh]">
-						<img src="/images/Screenshot_20251010_194731.webp" class="object-cover px-[10vw] h-[18vh]">
-						<img src="/images/Screenshot_20251010_194819.webp" class="object-cover px-[10vw] h-[18vh]">
+						<img
+							src="/images/Screenshot_20251010_194642.webp"
+							alt="Social Media Prototype — desktop feed"
+							class="object-cover px-[10vw] h-[18vh] 2xl:p-0 2xl:h-[15vh]"
+							loading="lazy"
+						/>
+						<img
+							src="/images/Screenshot_20251010_194731.webp"
+							alt="Social Media Prototype — post modal"
+							class="object-cover px-[10vw] h-[18vh] 2xl:p-0 2xl:h-[15vh]"
+							loading="lazy"
+						/>
+						<img
+							src="/images/Screenshot_20251010_194819.webp"
+							alt="Social Media Prototype — mobile layout"
+							class="object-cover px-[10vw] h-[18vh] 2xl:p-0 2xl:h-[15vh]"
+							loading="lazy"
+						/>
 					</SimpleSlider>
 					<p class="p-element-third">
-						<a class="w-1/2 bg-sky-500 hover:bg-pink-500 rounded-bl-md" href="https://chipper-haupia-b9fc77.netlify.app/" target="_blank">Demo</a>
-						<a class="w-1/2 bg-blue-500 hover:bg-pink-500 rounded-br-md" href="https://github.com/JesusMG24/social-media-exp" target="_blank">Source</a>
+						<a
+							class="w-1/2 bg-sky-500 hover:bg-pink-500 rounded-bl-md flex items-center justify-center h-[4vh] 2xl:h-[3vh]"
+							href="https://chipper-haupia-b9fc77.netlify.app/"
+							target="_blank"
+							rel="noopener noreferrer">Demo</a
+						>
+						<a
+							class="w-1/2 bg-blue-500 hover:bg-pink-500 rounded-br-md flex items-center justify-center h-[4vh] 2xl:h-[3vh]"
+							href="https://github.com/JesusMG24/social-media-exp"
+							target="_blank"
+							rel="noopener noreferrer">Source</a
+						>
+						<p
+							class="p-element-first w-screen px-[10vw] mt-[2vh] 2xl:w-full 2xl:px-0 2xl:text-[.8vw]"
+						>
+							A responsive UI prototype showcasing feed, post
+							modal and mobile layouts. Project is fully
+							dockerized.
+						</p>
+
+						<p
+							class="p-element-first w-screen px-[10vw] 2xl:w-full 2xl:px-0 2xl:text-[.8vw]"
+						>
+							<strong>Stack</strong>: React · Node · PostgreSQL ·
+							Docker · Tailwind
+						</p>
 					</p>
 				</article>
-			</Carousel>
+			</CarouselTwo>
 		</section>
 		<section class="section-element-first">
 			<h2 class="h2-element-first"><strong>Techs & Skills</strong></h2>
-			<Carousel>
+			<CarouselTwo>
 				<ul class="ul-element-first">
 					<h4 class="h4-element-first">Frontend</h4>
 					<div class="flex flex-wrap">
@@ -295,10 +409,58 @@ import SimpleSlider from "../components/SimpleSlider.astro";
 						</li>
 					</div>
 				</ul>
-			</Carousel>
+			</CarouselTwo>
 		</section>
-		<section>
-			<h2 class="h2-element-first"><strong>About me</strong></h2>
+		<section class="section-element-first border-none">
+			<h2 class="h2-element-first">
+				<strong>About Me</strong>
+			</h2>
+			<Carousel>
+				<li class="li-element-first">
+					<h3 class="h3-element-first">
+						Web Development Summer Course
+					</h3>
+					<p class="p-element-second">
+						<time datetime="2014-05">May 2014</time> — <time
+							datetime="2014-08">Aug 2014</time
+						>
+					</p>
+					<p class="p-element-first">
+						My first structured introduction to web development:
+						building dozens of landing pages with HTML, CSS and
+						JavaScript. It gave me practical fundamentals and a
+						habit of fast, iterative learning.
+					</p>
+				</li>
+				<li class="li-element-first">
+					<h3 class="h3-element-first">JavaScript Obsession</h3>
+					<p class="p-element-second">
+						<time datetime="2014-08">Aug 2014</time> — <time
+							datetime="2018">2018</time
+						>
+					</p>
+					<p class="p-element-first">
+						Those years were full of hands‑on JavaScript
+						tinkering—DOM hacks, mods and small tools. Minecraft
+						modding and quick experiments taught me event‑driven
+						logic and rapid iteration.
+					</p>
+				</li>
+				<li class="li-element-first">
+					<h3 class="h3-element-first">Game Developer Enthusiast</h3>
+					<p class="p-element-second">
+						<time datetime="2018">2018</time> — <time
+							datetime="2020">2020</time
+						>
+					</p>
+					<p class="p-element-first">
+						With a friend I jumped into Unreal Engine, experimenting
+						with Blueprints and C++. We prototyped small levels,
+						added simple AI behaviours, and I learned performance
+						profiling on larger codebases.
+					</p>
+				</li>
+			</Carousel>
 		</section>
 		<script type="module" src="/scripts/carousel.js"></script>
 		<script type="module" src="/scripts/simple-slider.js"></script>
