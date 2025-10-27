@@ -1,227 +1,235 @@
 @import "tailwindcss";
 
 body {
-    background-color: rgba(0, 0, 0, 0.87);
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    align-items: center;
-    text-align: center;
-    font-family: fantasy;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  text-align: center;
+  font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", Arial,
+    sans-serif;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button,
 input[type="button"],
 input[type="submit"],
 a[class*="bg-"] {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    transition: box-shadow .18s ease, transform .12s ease;
-    will-change: transform;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.18s ease, transform 0.12s ease;
+  will-change: transform;
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="submit"]:hover,
 a[class*="bg-"]:hover {
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
-    transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+  transform: translateY(-2px);
 }
 
 button:active,
 input[type="button"]:active,
 input[type="submit"]:active,
 a[class*="bg-"]:active {
-    transform: translateY(0);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(0);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 [data-carousel-list] {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 [data-carousel-list]::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 @layer components {
-    .header-element-first {
-        @apply w-screen flex flex-col gap-[2vh] items-center border-b py-[5vh] border-gray-500 2xl:border-gray-700 2xl:py-[3vh];
+  .header-element-first {
+    @apply w-screen flex flex-col gap-[2vh] items-center border-b py-[5vh] border-gray-500 2xl:border-gray-700 2xl:py-[3vh];
+  }
+
+  .li-element-first {
+    @apply flex flex-col w-screen shrink-0 px-[10vw] list-none gap-[2vh] 2xl:w-full 2xl:px-0 2xl:items-start 2xl:gap-[1vh];
+  }
+
+  .li-element-second {
+    @apply w-1/3 aspect-square px-[2vw] py-[1vh] 2xl:p-0 2xl:w-5/16;
+  }
+
+  .section-element-first {
+    @apply flex flex-col gap-[2vh] py-[5vh] border-b border-gray-500 2xl:border-gray-700 2xl:py-[3vh];
+  }
+
+  .p-element-first {
+    @apply text-start w-[80vw] 2xl:w-full;
+  }
+
+  .p-element-second {
+    @apply text-xs text-gray-300;
+  }
+
+  .p-element-third {
+    @apply flex w-screen px-[10vw] font-bold text-shadow-xs text-shadow-black 2xl:w-full 2xl:p-0;
+  }
+
+  .article-element-first {
+    @apply w-screen shrink-0 2xl:w-1/4;
+  }
+
+  .ul-element-first {
+    @apply w-screen shrink-0 px-[10vw] 2xl:px-0 2xl:w-1/4 2xl:flex 2xl:flex-col;
+  }
+
+  .h2-element-first {
+    @apply text-2xl;
+  }
+
+  .h2-element-first > strong {
+    display: inline-block;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 220, 120, 0.95) 45%,
+      rgba(255, 255, 255, 0.95) 55%,
+      rgba(255, 255, 255, 0.95) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform-origin: center;
+    animation: h2-shimmer 3s linear infinite, h2-pulse 6s ease-in-out infinite;
+  }
+
+  @keyframes h2-shimmer {
+    0% {
+      background-position: 0% 50%;
     }
 
-    .li-element-first {
-        @apply flex flex-col w-screen shrink-0 px-[10vw] list-none gap-[2vh] 2xl:w-full 2xl:px-0 2xl:items-start 2xl:gap-[1vh];
+    50% {
+      background-position: 100% 50%;
     }
 
-    .li-element-second {
-        @apply w-1/3 aspect-square px-[2vw] py-[1vh] 2xl:p-0 2xl:w-5/16;
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes h2-pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.06);
     }
 
-    .section-element-first {
-        @apply flex flex-col gap-[2vh] py-[5vh] border-b border-gray-500 2xl:border-gray-700 2xl:py-[3vh];
+    50% {
+      transform: scale(1.02);
+      text-shadow: 0 0 18px rgba(255, 220, 120, 0.12);
+    }
+  }
+
+  .h3-element-first {
+    @apply font-bold italic 2xl:h-[3vh] 2xl:flex 2xl:items-center 2xl:justify-center 2xl:text-[1vw];
+    font-family: "Gill Sans", sans-serif;
+  }
+
+  .h3-element-second {
+    @apply mb-[2vh] font-bold italic 2xl:text-[1vw];
+    font-family: "Gill Sans", sans-serif;
+  }
+
+  .h4-element-first {
+    @apply mb-[2vh] font-bold italic;
+    font-family: "Gill Sans", sans-serif;
+  }
+
+  .h5-element-first {
+    @apply mt-[1vh] 2xl:text-[.75vw];
+  }
+
+  .rainbow-text {
+    background: linear-gradient(
+      90deg,
+      #ff3cac,
+      #784ba0,
+      #2b86c5,
+      #06beb6,
+      #f8ff00,
+      #ff3cac
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 3s linear infinite;
+    font-style: italic;
+  }
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0% 50%;
     }
 
-    .p-element-first {
-        @apply text-start w-[80vw] 2xl:w-full;
+    50% {
+      background-position: 100% 50%;
     }
 
-    .p-element-second {
-        @apply text-xs text-gray-300;
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  a[aria-label="Download resume"] {
+    display: inline-block;
+    animation: cta-pulse 6s ease-in-out infinite;
+  }
+
+  @keyframes cta-pulse {
+    0%,
+    100% {
+      transform: translateY(0);
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
 
-    .p-element-third {
-        @apply flex w-screen px-[10vw] font-bold text-shadow-xs text-shadow-black 2xl:w-full 2xl:p-0;
+    50% {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
     }
+  }
 
-    .article-element-first {
-        @apply w-screen shrink-0 2xl:w-1/4;
-    }
-
-    .ul-element-first {
-        @apply w-screen shrink-0 px-[10vw] 2xl:px-0 2xl:w-1/4 2xl:flex 2xl:flex-col;
-    }
-
-    .h2-element-first {
-        @apply text-2xl;
-    }
-
-    .h2-element-first>strong {
-        display: inline-block;
-        background: linear-gradient(90deg,
-                rgba(255, 255, 255, 0.95) 0%,
-                rgba(255, 220, 120, 0.95) 45%,
-                rgba(255, 255, 255, 0.95) 55%,
-                rgba(255, 255, 255, 0.95) 100%);
-        background-size: 200% 100%;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        transform-origin: center;
-        animation: h2-shimmer 3s linear infinite, h2-pulse 6s ease-in-out infinite;
-    }
-
-    @keyframes h2-shimmer {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
-    }
-
-    @keyframes h2-pulse {
-
-        0%,
-        100% {
-            transform: scale(1);
-            text-shadow: 0 0 6px rgba(255, 255, 255, 0.06);
-        }
-
-        50% {
-            transform: scale(1.02);
-            text-shadow: 0 0 18px rgba(255, 220, 120, 0.12);
-        }
-    }
-
-    .h3-element-first {
-        @apply font-bold italic 2xl:h-[3vh] 2xl:flex 2xl:items-center 2xl:justify-center 2xl:text-[1vw];
-        font-family: "Gill Sans", sans-serif;
-    }
-
-    .h3-element-second {
-        @apply mb-[2vh] font-bold italic 2xl:text-[1vw];
-        font-family: "Gill Sans", sans-serif;
-    }
-
-    .h4-element-first {
-        @apply mb-[2vh] font-bold italic;
-        font-family: "Gill Sans", sans-serif;
-    }
-
-    .h5-element-first {
-        @apply mt-[1vh] 2xl:text-[.75vw];
-    }
-
+  @media (prefers-reduced-motion: reduce) {
     .rainbow-text {
-        background: linear-gradient(90deg,
-                #ff3cac, #784ba0, #2b86c5, #06beb6, #f8ff00, #ff3cac);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-        animation: rainbow 3s linear infinite;
-        font-style: italic;
+      animation: none;
+      background-size: 100% 100%;
     }
 
-    @keyframes rainbow {
-        0% {
-            background-position: 0% 50%;
-        }
-
-        50% {
-            background-position: 100% 50%;
-        }
-
-        100% {
-            background-position: 0% 50%;
-        }
+    .h2-element-first > strong {
+      animation: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+      color: whitesmoke;
+      text-shadow: none;
     }
 
     a[aria-label="Download resume"] {
-        display: inline-block;
-        animation: cta-pulse 6s ease-in-out infinite;
+      animation: none;
+      transform: none;
+      box-shadow: none;
     }
 
-    @keyframes cta-pulse {
-
-        0%,
-        100% {
-            transform: translateY(0);
-            box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-        }
-
-        50% {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-        }
+    button,
+    input[type="button"],
+    input[type="submit"],
+    a[class*="bg-"] {
+      transition: none;
+      transform: none;
     }
-
-    @media (prefers-reduced-motion: reduce) {
-        .rainbow-text {
-            animation: none;
-            background-size: 100% 100%;
-        }
-
-        .h2-element-first>strong {
-            animation: none;
-            -webkit-background-clip: unset;
-            background-clip: unset;
-            color: whitesmoke;
-            text-shadow: none;
-        }
-
-        a[aria-label="Download resume"] {
-            animation: none;
-            transform: none;
-            box-shadow: none;
-        }
-
-        button,
-        input[type="button"],
-        input[type="submit"],
-        a[class*="bg-"] {
-            transition: none;
-            transform: none;
-        }
-    }
+  }
 }
